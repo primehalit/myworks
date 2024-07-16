@@ -1,0 +1,57 @@
+<!-- views/deleteAccount.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap Silme</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/deleteAccount.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="delete-account-container">
+      <h1 class="text-center">Hesap Silme</h1>
+      <form id="deleteAccountForm" action="/delete-account" method="post">
+        <div class="form-group">
+          <label for="username">Kullanıcı İsmi:</label>
+          <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Şifre:</label>
+          <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Şifreyi Onayla:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+        </div>
+        <button type="button" onclick="submitForm()" class="btn btn-danger btn-block">Hesabı Sil</button>
+        <p id="errorMessage" class="text-danger"></p>
+      </form>
+      <br>
+      <p class="text-center"><a href="/dashboard" class="dashboard-link"><i class="bi bi-arrow-left"></i> Dashboard'a Geri Dön</a></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <p class="text-center">Hayatta en hakiki mürşit ilimdir, fendir.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS, jQuery, Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="/scripts/deleteAccount.js"></script>
+</body>
+
+</html>

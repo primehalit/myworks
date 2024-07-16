@@ -1,0 +1,51 @@
+<!-- views/dashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="dashboard-container">
+        <h1 class="text-center">HOŞGELDİNİZ, <%= user.username %>!</h1>
+        <a href="/add-details" class="dashboard-link btn btn-primary btn-block">
+            <i class="bi bi-person-plus"></i> Detayları Ekle
+        </a>
+        <a href="/search-user" class="dashboard-link btn btn-secondary btn-block">
+            <i class="bi bi-search"></i> Kullanıcı Ara
+        </a>
+        
+        <a href="/delete-account" class="dashboard-link btn btn-danger btn-block">
+          <i class="bi bi-person-x"></i> Hesabı Sil
+        </a>
+      
+        
+        <a href="/" class="btn btn-danger btn-logout">
+          <i class="bi bi-box-arrow-right"></i> Çıkış Yap
+        </a>
+        <div class="datetime-container"></div>
+    </div>
+</div>
+
+  <!-- Bootstrap JS, jQuery, Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="/scripts/dashboard.js"></script>
+</body>
+
+</html>
+

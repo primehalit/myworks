@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayıt Bölümü</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body>
+  <!-- Arka Plan Resmi -->
+  <img class="bg-image" src="public/images/image1.jpg" alt="Background Image">
+
+  <!-- RGB Animasyonu -->
+  <div class="bg-animation"></div>
+
+  <div class="register-container">
+    <h1 class="text-center"><i class="bi bi-person-plus"></i> Kayıt Olmak</h1>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="username"><i class="bi bi-person"></i> Kullanıcı İsmi:</label>
+        <input type="text" id="username" name="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="bi bi-shield-lock"></i> Şifre:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword"><i class="bi bi-shield-lock"></i> Şifreyi Onayla:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Kayıt Ol</button>
+    </form>
+    <br>
+    <p class="text-center">Zaten Hesabınız Var Mı? <a href="/"><i class="bi bi-door-open"></i> Giriş Paneli</a></p>
+    <p class="text-center"><%= message %></p>
+  </div>
+
+  <!-- Bootstrap JS, jQuery, Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

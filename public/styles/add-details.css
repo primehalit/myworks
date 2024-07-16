@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background: url('/images/image1.jpg') center/cover no-repeat fixed;
+  animation: changeBackground 10s linear infinite; /* Her ** saniyede bir arka plan değişecek */
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('/images/image1.jpg');
+  }
+  25% {
+    background-image: url('/images/image2.jpg');
+  }
+  50% {
+    background-image: url('/images/image3.jpg');
+  }
+  75% {
+    background-image: url('/images/image4.jpg');
+  }
+  100% {
+    background-image: url('/images/image1.jpg');
+  }
+}
+.details-container {
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* Yazıları renkli ve animasyonlu yap */
+.details-container h1,
+.details-container label,
+.details-container p,
+.details-container a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.details-container h1:hover,
+.details-container label:hover,
+.details-container p:hover,
+.details-container a:hover {
+  color: #f39c12; /* Ya da istediğiniz başka bir renk */
+}
+
+/* Animasyon ekleyin */
+.details-container h1,
+.details-container label,
+.details-container p,
+.details-container a {
+  transition: color 0.3s, transform 0.3s;
+}
+
+.details-container h1:hover,
+.details-container label:hover,
+.details-container p:hover,
+.details-container a:hover {
+  color: #f39c12; /* Ya da istediğiniz başka bir renk */
+  transform: scale(1.1); /* Büyütme animasyonu */
+}
+
+.details-container input,
+.details-container select {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  color: #000;
+}
+
+.details-container button {
+  background-color: rgba(0, 123, 255, 0.7); /* Saydam mavi arka plan */
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  transition: background-color 0.3s; /* Daha yumuşak renk değişimi için geçiş ekleyin */
+}
+
+.details-container button:hover {
+  background-color: rgba(0, 86, 179, 0.7); /* Saydamlaşan daha koyu mavi hover rengi */
+}
+
+.details-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.details-container a:hover {
+  text-decoration: underline;
+}
+
+.details-container label {
+  color: #fff;
+  font-weight: bold;
+}
+
+h1 {
+  color: #007bff;
+}
+
+label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}

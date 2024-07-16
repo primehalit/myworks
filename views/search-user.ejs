@@ -1,0 +1,65 @@
+<!-- views/search-user.ejs -->
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kullanıcı Detayları</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/search-user.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="search-container">
+      <h1 class="text-center">Kullanıcı Detayları</h1>
+  
+      <form action="/search-user" method="post">
+        <div class="form-group">
+          <label for="searchedUsername">Kullanıcı İsmi:</label>
+          <input type="text" id="searchedUsername" name="searchedUsername" class="form-control" required oninput="liveSearch()">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Ara</button>
+      </form>
+  
+      <!-- Display live search results -->
+      <ul id="searchResults" class="list-group"></ul>
+  
+      <div id="userDetails">
+        <% if (typeof error !== 'undefined' && error) { %>
+          <p class="text-danger"><%= error %></p>
+        <% } else if (typeof user !== 'undefined' && user) { %>
+          <h2>Kullanıcı İsmi: <%= user.username %></h2>
+  
+          <!-- Display other user details here -->
+          <% if (typeof details !== 'undefined' && details && details.length > 0) { %>
+            <h2>PostgreSQL Kullanıcı Detayları</h2>
+            <% details.forEach(detail => { %>
+              <p>Şehir: <%= detail.city %></p>
+              <p>Doğum Tarihi: <%= detail.birthdate %></p>
+              <p>Cinsiyet: <%= detail.gender %></p>
+            <% }); %>
+          <% } else { %>
+            <p>PostgreSQL'de bu kullanıcı için detay bulunamadı.</p>
+          <% } %>
+  
+          <a href="/dashboard" class="btn btn-danger btn-block mt-3">Dashboard'a Geri Dön</a>
+        <% } %>
+      </div>
+    </div>
+  <!-- Bootstrap JS, jQuery, Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for live search -->
+  <script src="/scripts/search-user.js"></script>
+
+
+</body>
+
+</html>

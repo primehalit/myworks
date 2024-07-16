@@ -1,0 +1,110 @@
+body {
+    background: linear-gradient(90deg, #0017e6, #e6f200);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .dashboard-container .dashboard-content {
+    width: 50%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: dashboardFadeIn 1s ease;
+  }
+
+  .dashboard-container .dashboard-content.left {
+    background: linear-gradient(45deg, #0F52BA, #4682B4, #87CEEB);
+  }
+
+  .dashboard-container .dashboard-content.right {
+    background: linear-gradient(45deg, #008000, #32CD32, #9ACD32);
+  }
+
+  .dashboard-link {
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dashboard-container h1 {
+    color: #fff;
+    animation: colorChange 2s infinite alternate; /* Otomatik renk geçişi */
+  }
+
+
+  .btn-add-details,
+  .btn-search-user,
+  .btn-logout {
+    color: #fff;
+  }
+
+  .dashboard-link:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .dashboard-container {
+    position: relative;
+  }
+
+  .dashboard-content {
+    position: relative;
+  }
+
+  .btn-logout {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: #dc3545; /* Çıkış yap butonunun arkaplan rengi */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .datetime-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+  }
+
+  @keyframes dashboardFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: #fff;
+    }
+    25% {
+      color: #008000;
+    }
+    50% {
+      color: #b12e2e;
+    }
+    75% {
+      color: #a22391;
+    }
+    100% {
+      color: #00ff00;
+    }
+  }

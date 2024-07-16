@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(45deg, #d7ee0c, #1100ff);
+    color: #000000;
+    animation: gradientAnimation 5s infinite alternate;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .search-form {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  /* Ara butonu renk animasyonları */
+  .btn-primary {
+    animation: colorChangeAra 5s infinite alternate;
+    font-size: 15px; /* Düğme boyutunu ayarla */
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+  @keyframes colorChangeAra {
+    0% {
+      background-color: rgb(255, 0, 0);
+    }
+    25% {
+      background-color: rgb(0, 255, 0);
+    }
+    50% {
+      background-color: rgb(0, 0, 255);
+    }
+    75% {
+      background-color: rgb(255, 255, 0);
+    }
+    100% {
+      background-color: rgb(255, 0, 255);
+    }
+  }
+  
+  /* Dashboard'a Geri Dön butonu renk animasyonları */
+  .btn-danger {
+    animation: colorChangeDashboard 6s infinite alternate;
+    font-size: 14px; /* Düğme boyutunu ayarla */
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+  @keyframes colorChangeDashboard {
+    0% {
+      background-color: rgb(72, 15, 125);
+    }
+    25% {
+      background-color: rgb(21, 135, 122);
+    }
+    50% {
+      background-color: rgb(94, 37, 37);
+    }
+    75% {
+      background-color: rgb(98, 63, 95);
+    }
+    100% {
+      background-color: rgb(221, 159, 37);
+    }
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-image: linear-gradient(45deg, #d7ee0c, #1100ff);
+    }
+    25% {
+      background-image: linear-gradient(45deg, #ff00ff, #00ff00);
+    }
+    50% {
+      background-image: linear-gradient(45deg, #7712a2, #00ffff);
+    }
+    75% {
+      background-image: linear-gradient(45deg, #00ffff, #f60000);
+    }
+    100% {
+      background-image: linear-gradient(45deg, #0000ff, #f0f006);
+    }
+  }
+  

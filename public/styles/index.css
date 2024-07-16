@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Giriş Formu ve Kontrolleri */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: lightPulse 2s infinite;
+}
+
+/* Giriş Butonu */
+.btn-login {
+  background: linear-gradient(to right, #6a2d22, #27c416, #12278f); /* RGB renkli arka plan */
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Havai Fişek Efekti */
+.btn-login::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 80%);
+  transform: scale(0);
+  transform-origin: 100% 100%;
+  transition: transform 0.8s ease-out;
+  z-index: 2;
+}
+
+.btn-login:hover::before {
+  transform: scale(2);
+}
+
+.btn-login:active {
+  background-color: #003366;
+  border-color: #003366;
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95); /* Hafif bir küçültme efekti */
+}
+
+.btn-login:hover {
+  background: linear-gradient(to right, #2a1f1a, #410b2f, #95a916); /* Renk geçişini değiştir */
+  color: #00ff00; /* Parlak yeşil renk */
+  animation: colorChange 2s infinite; /* Renk animasyonu ekleyin */
+}
+@keyframes colorChange {
+  0% { color: #ff4500; }
+  50% { color: #47c5ff; }
+  100% { color: #9900ff; }
+}
+
+@keyframes textEnlarge {
+  0% { font-size: 16px; opacity: 0.8; }
+  25% { font-size: 18px; opacity: 0.9; }
+  50% { font-size: 20px; opacity: 1; }
+  75% { font-size: 22px; opacity: 0.9; }
+  100% { font-size: 24px; opacity: 0.8; }
+}
+
+h1, label, .message {
+  color: transparent;
+  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Renkli geçiş */
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: colorChange 4s infinite, textEnlarge 1s ease-in-out;
+}
+
+h1:hover, label:hover, .message:hover {
+  color: #1ad3d0; /* Parlak yeşil renk */
+  transform: scale(1.1);
+  text-shadow: 2px 2px 4px rgba(26, 211, 208, 0.8);
+  transition: text-shadow 0.3s ease;
+}
+a {
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00ff00; /* Parlak yeşil renk */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.register-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5adfc9;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #47ff8d;
+  animation: blink 1s infinite;
+}
+/* Işıkların animasyonu */
+@keyframes lightPulse {
+  0% { box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.5); }
+  50% { box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.3); }
+  100% { box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.5); }
+}
+
+/* Arka plan ışıkları */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.5) 0%, rgba(0, 0, 0, 0) 100%); /* Mavi ışıkların gradienti */
+  pointer-events: none; /* Işıkların üzerine tıklamayı engelle */
+  z-index: 0;
+  animation: lightPulse 2s infinite; /* Işıkların animasyonu */
+}
+
+.message {
+  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Renkli geçiş */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: colorChange 4s infinite; /* Renk animasyonu ekleyin */
+}
+
+@keyframes colorChange {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0 100%; }
+}
+
+/* Hover Effect for Text Elements */
+.login-container h1,
+.login-container label,
+.login-container p,
+.login-container a {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.login-container h1:hover,
+.login-container label:hover,
+.login-container p:hover,
+.login-container a:hover {
+  color: #1ad3d0; /* Parlak yeşil renk */
+  transform: scale(1.1);
+}
+
+/* Yazı Büyütme Animasyonu */
+@keyframes textEnlarge {
+  0% { font-size: 16px; opacity: 0.8; }
+  25% { font-size: 18px; opacity: 0.9; }
+  50% { font-size: 20px; opacity: 1; }
+  75% { font-size: 22px; opacity: 0.9; }
+  100% { font-size: 24px; opacity: 0.8; }
+}
+
+/* Animasyonu Uygula */
+.login-container h1,
+.login-container label,
+.login-container p,
+.login-container a,
+.message {
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+  animation: textEnlarge 1s ease-in-out;
+}
+
+.login-container h1:hover,
+.login-container label:hover,
+.login-container p:hover,
+.login-container a:hover,
+.message:hover {
+  color: #18eaf2; /* Parlak yeşil renk */
+  transform: scale(1.1);
+}

@@ -1,0 +1,29 @@
+{
+  "name": "my_projecthm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^7.1.0",
+    "cookie-parser": "^1.4.6",
+    "create-error": "^0.3.1",
+    "ejs": "^3.1.9",
+    "errorhandler": "^1.5.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.11.3",
+    "redis": "^4.6.12"
+  }
+}

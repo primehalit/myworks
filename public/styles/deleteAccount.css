@@ -1,0 +1,109 @@
+/* styles/deleteAccount.css */
+body {
+    background-image: url('/images/image6.jpg'); /* Tek bir resim arka planı */
+    background-size: cover; /* Resmi kaplamak için */
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: center; /* Yazıyı ortala */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/* Delete account container */
+.delete-account-container {
+    position: relative; /* Göreceli konumlandırma */
+    z-index: 1; /* Metinlerin diğer içeriğin üzerine gelmesini sağlar */
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(120, 116, 116, 0.7); /* Siyah ve %70 saydam arka plan */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+/* Form inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Error message */
+#errorMessage {
+    margin-top: 20px; /* Yukarıdan 20px boşluk */
+    margin-bottom: 10px; /* Aşağıdan 10px boşluk */
+    color: white; /* Yazı rengi */
+    font-weight: bold; /* Kalın */
+    font-style: italic; /* İtalik */
+}
+
+/* Dashboard link */
+.dashboard-link {
+    color: #333;
+    font-size: 14px;
+}
+
+.dashboard-link:hover {
+    color: #007bff;
+}
+
+/* Button */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Animasyon tanımı */
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0px #dc3545;
+    }
+    to {
+        box-shadow: 0 0 20px 10px #dc3545;
+    }
+}
+
+.footer {
+    position: relative; /* Göreceli konumlandırma */
+    z-index: 1; /* Metinlerin diğer içeriğin üzerine gelmesini sağlar */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    animation: rainbowText 5s infinite;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Fosfor efekti */
+}
+
+@keyframes rainbowText {
+    0% {
+        color: red;
+    }
+    20% {
+        color: orange;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: indigo;
+    }
+}
